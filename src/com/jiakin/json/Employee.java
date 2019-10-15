@@ -8,12 +8,12 @@ public class Employee {
 	private Integer empno;
 	private String ename;
 	private String job;
-	@JSONField(name="hiredate", format="yyyy-MM-dd HH:mm:ss SSS")   //×¢½âºóÃæ²»¼Ó·ÖºÅ, name¿ÉÒÔÖ¸¶¨JsonµÄkeyµÄ¼üÃû
+	@JSONField(name="hiredate", format="yyyy-MM-dd HH:mm:ss SSS")   //×¢ï¿½ï¿½ï¿½ï¿½æ²»ï¿½Ó·Öºï¿½, nameï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½Jsonï¿½ï¿½keyï¿½Ä¼ï¿½ï¿½ï¿½
 	private Date hdate;
 	private Float salary;
 	
 	public Employee() {
-	
+	System.out.println("Employee() æž„é€ æ–¹æ³•æ‰§è¡Œäº†");
 	}
 	
 	public Employee(Integer empno, String ename, String job, Date hdate, Float salary, String dname) {	
@@ -25,7 +25,7 @@ public class Employee {
 		this.dname = dname;
 	}
 	
-	@JSONField(serialize = false)  //±íÊ¾£¬¶ÔdnameÕâ¸öÊôÐÔ£¬²»ÐòÁÐ»¯Êä³öµ½Json×Ö·û´®¡£
+	@JSONField(serialize = false)  //ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½dnameï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Jsonï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½
 	private String dname;
 	public Integer getEmpno() {
 		return empno;
